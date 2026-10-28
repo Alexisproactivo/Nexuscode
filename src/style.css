@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nexus-bg: #0d1117;
+  --nexus-surface: #161c26;
+  --nexus-border: rgba(255, 255, 255, 0.08);
+  --nexus-indigo: #3b82f6;
+  --nexus-brass: #d4af37;
+  --nexus-chalk: #f8fafc;
+  --nexus-slate: #94a3b8;
+}
+
+@layer base {
+  body {
+    background-color: var(--nexus-bg);
+    color: var(--nexus-chalk);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Superficies artesanales y bordes de precisión */
+.nexus-card {
+  background-color: #161c26;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nexus-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.nexus-card-amber:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+/* Retícula arquitectónica sutil */
+.bg-architectural-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+/* Animación de entrada por intersección de scroll */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilizado de <dialog> nativos (Light-Dismiss & Top-Layer) */
+dialog.nexus-dialog {
+  background-color: #161c26;
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0;
+  max-width: min(92vw, 640px);
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85);
+}
+
+dialog.nexus-dialog::backdrop {
+  background-color: rgba(8, 11, 16, 0.78);
+  backdrop-filter: blur(6px);
+}
+
+/* Validación diferida tras interacción (:user-invalid / :user-valid) */
+.nexus-input:user-invalid,
+.nexus-input.user-invalid-fallback {
+  border-color: #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.06);
+}
+
+.nexus-input:user-valid,
+.nexus-input.user-valid-fallback {
+  border-color: #10b981 !important;
+}
+
+.nexus-field .nexus-error-msg {
+  display: none;
+}
+
+.nexus-input:user-invalid ~ .nexus-error-msg,
+.nexus-input.user-invalid-fallback ~ .nexus-error-msg {
+  display: flex;
+}
+
+/* Scrollbar técnica discreta */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232c3b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
