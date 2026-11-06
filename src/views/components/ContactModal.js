@@ -16,7 +16,7 @@ export class ContactModal {
           <!-- Cabecera del Modal -->
           <div class="flex items-start justify-between gap-4 pb-5 mb-6 border-b border-white/[0.08]">
             <div>
-              <span class="text-xs sm:text-sm font-mono uppercase tracking-wider text-amber-300/90 block mb-1">
+              <span class="text-xs sm:text-sm font-mono uppercase tracking-wider text-cyan-300/90 block mb-1">
                 ATENCIÓN DIRECTA EN AREQUIPA Y PERÚ
               </span>
               <h2 id="contact-dialog-title" class="text-xl sm:text-2xl font-display font-bold text-[#f8fafc] tracking-tight">
@@ -28,7 +28,7 @@ export class ContactModal {
               type="button"
               data-close-dialog="contact-lead-dialog"
               aria-label="Cerrar ventana de contacto"
-              class="p-2 rounded-lg bg-[#0d1117] border border-white/[0.08] text-slate-400 hover:text-white hover:border-white/20 transition-colors"
+              class="p-2 rounded-xl bg-black/30 border border-white/[0.08] text-slate-400 hover:text-white hover:border-white/20 transition-colors"
             >
               ✕
             </button>
@@ -41,7 +41,7 @@ export class ContactModal {
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="nexus-field">
                 <label for="lead-fullName" class="block font-body text-xs sm:text-sm font-semibold text-slate-200 mb-1">
-                  Tu Nombre y Apellido <span class="text-amber-300">*</span>
+                  Tu Nombre y Apellido <span class="text-cyan-300">*</span>
                 </label>
                 <span id="hint-fullName" class="block font-mono text-[11px] text-slate-400 mb-1.5">
                   ¿Con quién tenemos el gusto?
@@ -57,7 +57,7 @@ export class ContactModal {
                   placeholder="Ej. Carlos Mendoza"
                   aria-describedby="hint-fullName"
                   aria-errormessage="err-fullName"
-                  class="nexus-input w-full px-3.5 py-2.5 rounded-lg bg-[#0d1117] border border-white/[0.12] text-[#f8fafc] placeholder-slate-500 font-body text-sm focus:outline-none focus:border-[#3b82f6] transition-colors"
+                  class="nexus-input w-full px-3.5 py-2.5 rounded-xl bg-black/30 border border-white/[0.12] text-[#f8fafc] placeholder-slate-500 font-body text-sm focus:outline-none focus:border-cyan-400 transition-colors"
                 />
                 <div id="err-fullName" class="nexus-error-msg items-center gap-1.5 mt-1.5 text-xs font-body text-red-400">
                   <span aria-hidden="true">✕</span>
@@ -67,7 +67,7 @@ export class ContactModal {
 
               <div class="nexus-field">
                 <label for="lead-businessName" class="block font-body text-xs sm:text-sm font-semibold text-slate-200 mb-1">
-                  Nombre de tu Negocio o Rubro <span class="text-amber-300">*</span>
+                  Nombre de tu Negocio o Rubro <span class="text-cyan-300">*</span>
                 </label>
                 <span id="hint-businessName" class="block font-mono text-[11px] text-slate-400 mb-1.5">
                   Ej. Barbería, Salón, Clínica, Tienda
@@ -83,7 +83,7 @@ export class ContactModal {
                   placeholder="Ej. Barbería Imperial"
                   aria-describedby="hint-businessName"
                   aria-errormessage="err-businessName"
-                  class="nexus-input w-full px-3.5 py-2.5 rounded-lg bg-[#0d1117] border border-white/[0.12] text-[#f8fafc] placeholder-slate-500 font-body text-sm focus:outline-none focus:border-[#3b82f6] transition-colors"
+                  class="nexus-input w-full px-3.5 py-2.5 rounded-xl bg-black/30 border border-white/[0.12] text-[#f8fafc] placeholder-slate-500 font-body text-sm focus:outline-none focus:border-cyan-400 transition-colors"
                 />
                 <div id="err-businessName" class="nexus-error-msg items-center gap-1.5 mt-1.5 text-xs font-body text-red-400">
                   <span aria-hidden="true">✕</span>
@@ -96,13 +96,13 @@ export class ContactModal {
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="nexus-field">
                 <label for="lead-phone" class="block font-body text-xs sm:text-sm font-semibold text-slate-200 mb-1">
-                  Tu Celular / WhatsApp <span class="text-amber-300">*</span>
+                  Tu Celular / WhatsApp <span class="text-cyan-300">*</span>
                 </label>
                 <span id="hint-phone" class="block font-mono text-[11px] text-slate-400 mb-1.5">
                   9 dígitos (Ejemplo: 961712546)
                 </span>
                 <div class="relative flex items-center">
-                  <span class="px-3 py-2.5 rounded-l-lg bg-[#161c26] border border-r-0 border-white/[0.12] font-mono text-xs text-amber-300/90 select-none">
+                  <span class="px-3 py-2.5 rounded-l-lg bg-white/[0.04] border border-r-0 border-white/[0.12] font-mono text-xs text-cyan-300/90 select-none">
                     +51
                   </span>
                   <input
@@ -117,7 +117,7 @@ export class ContactModal {
                     placeholder="961712546"
                     aria-describedby="hint-phone"
                     aria-errormessage="err-phone"
-                    class="nexus-input w-full px-3.5 py-2.5 rounded-r-lg bg-[#0d1117] border border-white/[0.12] text-[#f8fafc] placeholder-slate-500 font-mono text-sm focus:outline-none focus:border-[#3b82f6] transition-colors"
+                    class="nexus-input w-full px-3.5 py-2.5 rounded-r-lg bg-black/30 border border-white/[0.12] text-[#f8fafc] placeholder-slate-500 font-mono text-sm focus:outline-none focus:border-cyan-400 transition-colors"
                   />
                 </div>
                 <div id="err-phone" class="nexus-error-msg items-center gap-1.5 mt-1.5 text-xs font-body text-red-400">
@@ -137,7 +137,7 @@ export class ContactModal {
                   id="lead-selectedPlan"
                   name="selectedPlan"
                   aria-describedby="hint-plan"
-                  class="w-full px-3.5 py-2.5 rounded-lg bg-[#0d1117] border border-white/[0.12] text-[#f8fafc] font-body text-sm focus:outline-none focus:border-[#3b82f6] transition-colors"
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-black/30 border border-white/[0.12] text-[#f8fafc] font-body text-sm focus:outline-none focus:border-cyan-400 transition-colors"
                 >
                   <option value="PLAN B — Página Ágil y Prediseñada (S/ 300)">Plan B — Página Ágil y Prediseñada (S/ 300)</option>
                   <option value="PLAN A — Sistema Exclusivo a Medida">Plan A — Sistema Exclusivo a Medida (S/ 1,200 - S/ 1,500+)</option>
@@ -149,7 +149,7 @@ export class ContactModal {
             <!-- Fila 3: Qué necesitas -->
             <div class="nexus-field">
               <label for="lead-projectDetails" class="block font-body text-xs sm:text-sm font-semibold text-slate-200 mb-1">
-                ¿Qué te gustaría implementar en tu negocio? <span class="text-amber-300">*</span>
+                ¿Qué te gustaría implementar en tu negocio? <span class="text-cyan-300">*</span>
               </label>
               <span id="hint-details" class="block font-mono text-[11px] text-slate-400 mb-1.5">
                 Cuéntanos brevemente qué servicios ofreces o qué demo te gustó más
@@ -164,7 +164,7 @@ export class ContactModal {
                 placeholder="Ej. Tengo una barbería en Arequipa y me gustaría el sistema de citas 24/7 con cierre de caja diaria como la demo de MJ Barber..."
                 aria-describedby="hint-details"
                 aria-errormessage="err-details"
-                class="nexus-input w-full px-3.5 py-2.5 rounded-lg bg-[#0d1117] border border-white/[0.12] text-[#f8fafc] placeholder-slate-500 font-body text-sm focus:outline-none focus:border-[#3b82f6] transition-colors resize-none"
+                class="nexus-input w-full px-3.5 py-2.5 rounded-xl bg-black/30 border border-white/[0.12] text-[#f8fafc] placeholder-slate-500 font-body text-sm focus:outline-none focus:border-cyan-400 transition-colors resize-none"
               ></textarea>
               <div id="err-details" class="nexus-error-msg items-center gap-1.5 mt-1.5 text-xs font-body text-red-400">
                 <span aria-hidden="true">✕</span>
@@ -177,7 +177,7 @@ export class ContactModal {
               id="contact-form-feedback"
               role="status"
               aria-live="polite"
-              class="hidden p-3.5 rounded-lg font-body text-xs sm:text-sm"
+              class="hidden p-3.5 rounded-xl font-body text-xs sm:text-sm"
             ></div>
 
             <!-- Botón de Envío Directo a WhatsApp -->
@@ -190,7 +190,7 @@ export class ContactModal {
 
               <button
                 type="submit"
-                class="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#3b82f6] hover:bg-[#2563eb] text-[#f8fafc] font-body text-sm font-semibold transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-md"
+                class="w-full sm:w-auto px-6 py-3 rounded-xl btn-primary text-[#f8fafc] font-body text-sm font-semibold transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-md"
               >
                 <span>Enviar a WhatsApp (+51 961 712 546)</span>
                 <span aria-hidden="true">↗</span>

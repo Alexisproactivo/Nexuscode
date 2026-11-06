@@ -13,7 +13,6 @@ export class UIController {
     UIController.setupDialogs();
     UIController.setupMobileMenu();
     UIController.setupPortfolioFilter();
-    UIController.setupScrollReveal();
   }
 
   /**
@@ -59,7 +58,10 @@ export class UIController {
         const detailsTextarea = document.getElementById('lead-projectDetails');
 
         if (presetPlan && planSelect) {
-          planSelect.value = presetPlan;
+          const planOption = Array.from(planSelect.options).find(
+            (opt) => opt.value === presetPlan || opt.value.startsWith(presetPlan)
+          );
+          if (planOption) planSelect.value = planOption.value;
         }
 
         if (presetService && serviceSelect) {
@@ -142,6 +144,8 @@ export class UIController {
     if (!toggleBtn || !drawer) return;
     toggleBtn.setAttribute('aria-expanded', 'true');
     drawer.classList.remove('hidden');
+    drawer.classList.add('flex');
+    document.documentElement.style.overflow = 'hidden';
     iconOpen?.classList.add('hidden');
     iconClose?.classList.remove('hidden');
   }
@@ -155,6 +159,8 @@ export class UIController {
     if (!toggleBtn || !drawer) return;
     toggleBtn.setAttribute('aria-expanded', 'false');
     drawer.classList.add('hidden');
+    drawer.classList.remove('flex');
+    document.documentElement.style.overflow = '';
     iconOpen?.classList.remove('hidden');
     iconClose?.classList.add('hidden');
   }

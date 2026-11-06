@@ -6,7 +6,7 @@
   <title>Nexus Code Systems </title>
   <meta name="description" content="Desarrollamos recepcionistas automáticos de citas 24/7, catálogos con control de caja diaria y sistemas web a medida en Arequipa, Perú. Liderado por Rodrigo Apaza Valle y Alex Darwin Colque." />
   <meta name="author" content="Rodrigo Apaza Valle & Alex Darwin Colque — Nexus Code Systems" />
-  <meta name="theme-color" content="#0d1117" />
+  <meta name="theme-color" content="#05070d" />
 
   <!-- Open Graph / Redes Sociales -->
   <meta property="og:type" content="website" />
@@ -17,12 +17,37 @@
   <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans y JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="icon" type="image/png" href="/public/favicon.png" />
-  <link rel="stylesheet" href="/src/style.css" />
-</head>
-<body class="bg-[#0d1117] text-[#f8fafc] font-body antialiased selection:bg-[#3b82f6]/30 selection:text-[#f8fafc] overflow-x-hidden">
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+<body class="nx-noise bg-[#05070d] text-[#f1f5f9] font-body antialiased overflow-x-hidden">
+  <!-- Pantalla de carga: la N del logo se dibuja sola -->
+  <div id="nx-preloader" aria-hidden="true">
+    <div class="flex flex-col items-center gap-6">
+      <svg class="pl-logo w-20 h-24" viewBox="0 0 100 120" fill="none">
+        <defs>
+          <linearGradient id="plg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#67e8f9" />
+            <stop offset="1" stop-color="#3b82f6" />
+          </linearGradient>
+          <filter id="plglow"><feGaussianBlur stdDeviation="3" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+        </defs>
+        <path d="M15 105 L15 15 L85 105 L85 15" stroke="url(#plg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" filter="url(#plglow)" />
+        <circle cx="15" cy="105" r="9" fill="#3b82f6" filter="url(#plglow)" />
+        <circle cx="15" cy="15" r="9" fill="#e0f7ff" filter="url(#plglow)" />
+        <circle cx="85" cy="105" r="9" fill="#e0f7ff" filter="url(#plglow)" />
+        <circle cx="85" cy="15" r="9" fill="#22d3ee" filter="url(#plglow)" />
+      </svg>
+      <div class="font-mono text-xs tracking-[0.4em] text-cyan-300/80">
+        <span id="pl-count">0</span>%
+      </div>
+    </div>
+  </div>
+
+  <div class="nx-cursor" aria-hidden="true"></div>
+  <div class="nx-cursor-dot" aria-hidden="true"></div>
+
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
 </body>

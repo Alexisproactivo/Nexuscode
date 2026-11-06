@@ -8,6 +8,7 @@ import { HomeView } from './views/pages/HomeView.js';
 import { HeroCanvas3D } from './views/components/HeroCanvas3D.js';
 import { UIController } from './controllers/UIController.js';
 import { ContactController } from './controllers/ContactController.js';
+import { MotionController } from './controllers/MotionController.js';
 
 function bootstrapNexusApplication() {
   const appRoot = document.getElementById('app');
@@ -20,13 +21,16 @@ function bootstrapNexusApplication() {
   appRoot.innerHTML = HomeView.render();
 
   // 3. Montar la estructura geométrica 3D interactiva en el Hero
-  HeroCanvas3D.mount('hero-3d-stage');
+  const hero3d = HeroCanvas3D.mount('hero-3d-stage');
 
   // 4. Activar menús, modales y envío a WhatsApp
   UIController.init();
   ContactController.init();
 
-  // 5. Instrucciones en consola para colocar las fotos de los socios fundadores
+  // 5. Coreografía de animaciones (scroll suave, intro, revelados, 3D)
+  MotionController.init({ hero3d });
+
+  // 6. Instrucciones en consola para colocar las fotos de los socios fundadores
   console.info(
     '%c[Nexus Code Systems] Guía de Fotografías de Socios Fundadores:\n' +
       '• Carpeta exacta donde pegar las fotos: C:\\Users\\USER\\OneDrive\\Desktop\\Nexuscode\\public\\\n' +

@@ -18,7 +18,7 @@ export class LegalModals {
         <div class="p-6 sm:p-8 max-h-[85vh] overflow-y-auto">
           <div class="flex items-start justify-between gap-4 pb-4 mb-5 border-b border-white/[0.08]">
             <div>
-              <span class="text-xs sm:text-sm font-mono uppercase tracking-wider text-amber-300/90 block mb-1">
+              <span class="text-xs sm:text-sm font-mono uppercase tracking-wider text-cyan-300/90 block mb-1">
                 LEY DE PROTECCIÓN DE DATOS PERSONALES N° 29733 — PERÚ
               </span>
               <h2 id="privacy-dialog-title" class="text-xl sm:text-2xl font-display font-bold text-[#f8fafc]">
@@ -29,7 +29,7 @@ export class LegalModals {
               type="button"
               data-close-dialog="legal-privacy-dialog"
               aria-label="Cerrar Política de Privacidad"
-              class="p-2 rounded-lg bg-[#0d1117] border border-white/[0.08] text-slate-400 hover:text-white"
+              class="p-2 rounded-xl bg-black/30 border border-white/[0.08] text-slate-400 hover:text-white"
             >
               ✕
             </button>
@@ -62,7 +62,7 @@ export class LegalModals {
             <button
               type="button"
               data-close-dialog="legal-privacy-dialog"
-              class="px-5 py-2.5 rounded-lg bg-[#3b82f6] hover:bg-[#2563eb] text-[#f8fafc] font-body text-sm font-semibold"
+              class="px-5 py-2.5 rounded-xl btn-primary text-[#f8fafc] font-body text-sm font-semibold"
             >
               Entendido y Cerrar
             </button>
@@ -80,7 +80,7 @@ export class LegalModals {
         <div class="p-6 sm:p-8 max-h-[85vh] overflow-y-auto">
           <div class="flex items-start justify-between gap-4 pb-4 mb-5 border-b border-white/[0.08]">
             <div>
-              <span class="text-xs sm:text-sm font-mono uppercase tracking-wider text-amber-300/90 block mb-1">
+              <span class="text-xs sm:text-sm font-mono uppercase tracking-wider text-cyan-300/90 block mb-1">
                 REGLAS CLARAS DE ATENCIÓN Y SOPORTE
               </span>
               <h2 id="terms-dialog-title" class="text-xl sm:text-2xl font-display font-bold text-[#f8fafc]">
@@ -91,7 +91,7 @@ export class LegalModals {
               type="button"
               data-close-dialog="legal-terms-dialog"
               aria-label="Cerrar Términos del Servicio"
-              class="p-2 rounded-lg bg-[#0d1117] border border-white/[0.08] text-slate-400 hover:text-white"
+              class="p-2 rounded-xl bg-black/30 border border-white/[0.08] text-slate-400 hover:text-white"
             >
               ✕
             </button>
@@ -125,7 +125,7 @@ export class LegalModals {
             <button
               type="button"
               data-close-dialog="legal-terms-dialog"
-              class="px-5 py-2.5 rounded-lg bg-[#3b82f6] hover:bg-[#2563eb] text-[#f8fafc] font-body text-sm font-semibold"
+              class="px-5 py-2.5 rounded-xl btn-primary text-[#f8fafc] font-body text-sm font-semibold"
             >
               Cerrar Términos
             </button>
